@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Darleine Abellard
+    CS 132 SP 2024 
+    CP4: Node/Express API
+    This is the index.html for a random thought website using Node. This file includes both the 
+    writing page and viewing/organizational page.
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Thoughts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Source: "https://www.flaticon.com/free-icons/diary" Icon created by Freepik - Flaticon -->
+    <link rel="shortcut icon" href="imgs/diary-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="diary.js"></script>
+</head>
+<body>
+    <header>
+        <h1>right now, i'm thinking...</h1>
+        <nav>
+            <ul>
+                <li id="write-btn">write</li>
+                <li id="view-btn">view</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="write">
+            <form id="thought-form">
+                <div>
+                    <label for="topics">topic:</label>
+                    <select name="topics" id="topics">
+                        <option value="negative">kinda mean &colon;&lpar;</option>
+                        <option value="positive" selected>something nice!</option>
+                        <option value="academics">academics</option>
+                        <option value="writing">writing ideas</option>
+                        <option value="crochet">crochet ideas</option>
+                        <option value="miscellaneous">miscellaneous</option>
+                    </select>
+                </div>
+                <textarea name="thought_content" id="thought-content" placeholder="add a thought here!" required></textarea>
+                <input id="submit-btn" type="submit">
+                <div id="confirmation"></div>
+            </form>
+        </section>
+        <section id="view" class="hidden">
+            <aside>
+                <h2>sort by:</h2>
+                <!-- sort by: category -->
+                <fieldset>
+                    <legend>topics</legend>
+                    <div>
+                        <input type="radio" id="all" name="topics" checked>
+                        <label for="all">all topics</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="negative" name="topics">
+                        <label for="negative">kinda mean &colon;&lpar;</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="positive" name="topics">
+                        <label for="positive">something nice!</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="academics" name="topics">
+                        <label for="academics">academics</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="writing" name="topics">
+                        <label for="writing">writing ideas</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="crochet" name="topics">
+                        <label for="crochet">crochet ideas</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="miscellaneous" name="topics">
+                        <label for="miscellaneous">miscellaneous</label>
+                    </div>
+                </fieldset>
+            </aside>
+            <section><!-- past thoughts stored here --></section>
+        </section>
+    </main>
+</body>
+</html>

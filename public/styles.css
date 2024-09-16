@@ -1,0 +1,163 @@
+/* 
+    Name: Darleine Abellard
+    CS 132 SP 2024
+    CP4: Node/Express API
+    This is the layout style sheet for a random thought website using Node. It includes both layout and 
+    coloring for all sections of the site.
+*/
+
+.hidden, #write.hidden, #view.hidden, article.hidden {
+    display: none;
+}
+
+#write, #view, #view aside, form, 
+#view aside > div, #write form > div, 
+#view section, .past-thoughts {
+    display: flex;
+}
+
+body {
+    background-color: #7765E3;
+    height: 100vh;
+    margin: 0%;
+}
+
+body, #submit-btn, textarea, 
+#topics, #range {
+    font-family: "Dekko", cursive;
+    color: #210b35;
+}
+
+nav ul, #write form, #view aside,
+.past-thoughts {
+    border-radius: 25px;
+    background-color: #E0D7FC;
+}
+
+nav ul, #view aside {
+    margin: 1%;
+}
+
+nav ul {
+    font-size: 14pt;
+}
+
+#write, #write form > div, footer {
+    justify-content: center;
+}
+
+#write form, #view aside, .past-thoughts {
+    flex-direction: column;
+}
+
+#write form, #view aside {
+    gap: 20px;
+}
+
+#write form > div, #view aside > div {
+    gap: 5px;
+}
+
+#view aside, #write textarea {
+    padding: 1%;
+}
+
+#write textarea, #submit-btn {
+    border-radius: 5px;
+}
+
+#submit-btn, .past-thoughts > p{
+    align-self: center;
+}
+
+nav li:hover, #submit-btn:hover{
+    cursor: pointer;
+}
+
+/* HEADER STYLES */
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24pt;
+    margin-top: 0%;
+    padding-top: 1%;
+}
+
+h2 {
+    font-size: 18pt;
+}
+
+nav ul {
+    padding: 1% 0%;
+}
+
+nav li {
+    display: inline;
+    padding: 0% 3%;
+}
+
+
+/* WRITE SECTION  */
+#write form {
+    margin: 5%;
+    padding: 5% 3%;
+    width: 58%;
+    height: fit-content;
+}
+
+#write form > div {
+    padding: 0%;
+}
+
+#submit-btn {
+    background-color: #4f2279;
+    color:#E0D7FC;
+    width: 10%;
+}
+
+/* VIEW SECTION */
+#view {
+    justify-content: space-between;
+}
+
+#view aside {
+    height: fit-content;
+}
+
+#view aside h2 {
+    margin: 6% 0% 0% 0%;
+}
+
+#view aside select {
+    width: fit-content;
+}
+
+#view fieldset {
+    padding: 0px 20px 0px 0px;
+    border: none;
+}
+
+#view fieldset legend {
+    padding: 0% 0% 5% 0%;
+}
+
+#view fieldset div {
+    padding: 2% 0%;
+}
+
+#view section {
+    flex-wrap: wrap;
+    width: 75%;
+    height: fit-content;
+    margin: 2%;
+    gap: 30px;
+}
+
+.past-thoughts {
+    width: 25%;
+    height: 10%;
+    padding: 2%;
+    justify-content: center;
+}
